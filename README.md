@@ -32,8 +32,8 @@
 
 ## 效果展示
 
-![资产列表](.\screenshots\资产列表.png)
+![资产列表](https://github.com/MeetYifan/Asset-Management-System/blob/master/screenshots/资产列表.png)
 
-![echarts图表](.\screenshots\图表.png)
+![echarts图表](https://github.com/MeetYifan/Asset-Management-System/blob/master/screenshots/图表.png)
 
-![员工列表](.\screenshots\员工列表.png)
+![员工列表](https://github.com/MeetYifan/Asset-Management-System/blob/master/screenshots/员工列表.png)
