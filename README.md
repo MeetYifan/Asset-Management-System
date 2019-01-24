@@ -32,8 +32,8 @@
 
 ## 效果展示
 
-![资产列表](C:\Users\84063\Desktop\资产管理系统\图\资产列表.png)
+![资产列表](.\screenshots\资产列表.png)
 
-![echarts图表](C:\Users\84063\Desktop\资产管理系统\图\图表.png)
+![echarts图表](.\screenshots\图表.png)
 
-![员工列表](C:\Users\84063\Desktop\资产管理系统\图\员工列表.png)
+![员工列表](.\screenshots\员工列表.png)
