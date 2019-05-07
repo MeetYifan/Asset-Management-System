@@ -14,16 +14,19 @@
         </el-card>
       </el-col>
     </el-row>
-    <div class="as_query">
-      <h3>排序方式</h3>
-      <div class="condition" style="margin-top: 10px">
-        <ul >
-          <li><el-radio v-model="radio" label="1" border size="small" @click.native="sortAs(id)">按编号</el-radio></li>
-          <li><el-radio v-model="radio" label="2" border size="small" @click.native="sortAs(name)">按名称</el-radio></li>
-          <li><el-radio v-model="radio" label="3" border size="small" @click.native="sortAs(status)">按状态</el-radio></li>
-          <!-- <li><button class="as_button" @click="orderBy(4)">按状态</button></li> -->
-        </ul>
+    <div class="right-sild">
+      <div class="as-query">
+        <h3>排序方式</h3>
+        <div class="condition" style="margin-top: 10px">
+          <ul >
+            <li><el-radio v-model="radio" label="1" border size="small" @click.native="sortAs(id)">按编号</el-radio></li>
+            <li><el-radio v-model="radio" label="2" border size="small" @click.native="sortAs(name)">按名称</el-radio></li>
+            <li><el-radio v-model="radio" label="3" border size="small" @click.native="sortAs(status)">按状态</el-radio></li>
+            <!-- <li><button class="as_button" @click="orderBy(4)">按状态</button></li> -->
+          </ul>
+        </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -173,7 +176,7 @@ export default {
       clear: both
   }
 
-  .as_query {
+  .as-query {
     position: absolute;
     right: 0;
     top: 60px;
@@ -181,7 +184,7 @@ export default {
     border-left: 1px solid rgb(238, 238, 238);
   }
 
-  .as_query h3 {
+  .as-query h3 {
     text-align: center;
     margin-top: 20px;
   }

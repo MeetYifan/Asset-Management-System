@@ -1,9 +1,11 @@
 <template>
   <div class="index">
     <el-container style="border: 1px solid #eee">
-      <el-aside width="201px">
-        <el-menu :default-openeds="['1']" router>
-          <el-menu-item index="/home" class="home">主 页</el-menu-item>
+      <el-aside style="width: 201px;">
+        <el-menu :default-active="onRoutes" active-text-color="#20a0ff" unique-opened router>
+          <el-menu-item index="/home" class="home">
+            <span>主 页</span>
+          </el-menu-item>
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>资产管理</template>
               <el-menu-item index="assetslist">资产列表</el-menu-item>
@@ -29,9 +31,9 @@
       </el-aside>
       
       <el-container>
-        <el-header style="text-align: right; font-size: 12px">
+        <el-header style="text-align: right; font-size: 12px; height: 40px;">
           <el-dropdown>
-            <div style="cursor: pointer">
+            <div style="cursor: pointer; color: #fff;">
               <i class="el-icon-setting" style="margin-right: 5px"></i>
               <span >{{ username }}</span>
             </div>
@@ -50,15 +52,23 @@
 </template>
 
 <script>
-var echarts = require('echarts');
+  import bus from './common/bus';
+  var echarts = require('echarts');
 
   export default {
+    data(){
+      return{
+      }
+    },
     computed: {
       username() {
         return this.$store.state.userinfo.username
       },
       nowhref() {
         return window.location.origin
+      },
+      onRoutes(){
+          return this.$route.path.replace('/','');
       }
     },
     methods: {
@@ -76,14 +86,10 @@ var echarts = require('echarts');
 </script>
 
 <style>
-  .el-header {
-    background-color: #B3C0D1;
-    color: #333;
-    line-height: 60px;
-  }
-  
-  .el-aside {
-    color: #333;
+    .el-container header.el-header {
+    background-color: rgba(117, 175, 250, 0.5); 
+    color: #fff;
+    line-height: 40px;
   }
 
   body,
@@ -97,6 +103,7 @@ var echarts = require('echarts');
   }
 
   .el-aside {
+    color: #333;
     background-color: #fff;
     border-right: solid 1px #e6e6e6;
   }
@@ -110,7 +117,11 @@ var echarts = require('echarts');
     background-color:#fff;
     font-size: 26px;
     color:#409EFF;
-    height: 60px;
+    height: 80px;
+  }
+
+  .home span {
+    line-height: 80px;
   }
 
   .home:hover{
