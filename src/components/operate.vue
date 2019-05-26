@@ -1,6 +1,6 @@
 <template>
   <div class="cover">
-    <el-card class="box-card operate-wrapper" style="overflow: scroll">
+    <el-card class="box-card operate-wrapper">
       <div slot="header" class="clearfix">
         <span>操作</span>
         <el-button style="float: right; padding: 3px 0" type="text" @click="close">关闭</el-button>

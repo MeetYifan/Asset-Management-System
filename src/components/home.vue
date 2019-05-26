@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h1>welcome to vuexms</h1>
+  <h1 class="welcome">welcome to vuexms</h1>
 </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style>
-  h1 {
+  .welcome {
     display: flex;
     justify-content: center;
     font-size: 35px;
