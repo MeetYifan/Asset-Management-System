@@ -1,21 +1,6 @@
 <template>
 <div>
   <h1>welcome to vuexms</h1>
-  <!-- <el-card class="box-card">
-    <div slot="header" class="clearfix">
-      <span>用户信息</span>
-      <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-    </div>
-    <div class="text item">
-      昵称：{{ userinfo.username }}
-    </div>
-    <div class="text item">
-      真实姓名：{{ userinfo.realname }}
-    </div>
-    <div class="text item">
-      证件编号：{{ userinfo.idType }}
-    </div>
-  </el-card> -->
 </div>
 </template>
 
@@ -44,6 +29,7 @@ export default {
     display: flex;
     justify-content: center;
     font-size: 35px;
+    margin-top: 16rem;
   }
 
   .text {

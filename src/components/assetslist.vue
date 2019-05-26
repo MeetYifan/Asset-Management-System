@@ -2,8 +2,8 @@
   <div>
     <el-row>
       <el-col :span="4" v-for="(item, index) in tableData" :key="index" :offset=1>
-        <el-card :body-style="{ padding: '0px' }" shadow="hover">
-          <div class="imagediv" :style="{backgroundImage:`url(${item.picture || '/static/assetsImg/default-as-picture.jpg'} )`}"></div>
+        <el-card :body-style="{ padding: '0px' }" shadow="hover" @click.native="show()" >
+          <div class="imagediv" :ind='item.id' :style="{backgroundImage:`url(${item.picture || '/static/assetsImg/default-as-picture.jpg'} )`}"></div>
           <div class="ascontent" style="padding: 14px;">
             <span>{{ item.name }}</span>
             <div class="bottom clearfix">
@@ -28,6 +28,9 @@
       </div>
 
     </div>
+    <div>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -39,7 +42,7 @@ export default {
     return {
       values: [],
       tableData:[],
-      radio: 1
+      radio: 1,
     };
   },
   created() {
@@ -65,6 +68,19 @@ export default {
         return a.val - b.val
       }
       this.tableData.sort(compare)
+    },
+    show(){
+      this.$router.push('/assetslist/operate')
+      if(!e){
+        var e = window.event;
+      }
+      //获取事件点击元素
+      var targNo = e.target.getAttribute('ind');
+      // console.log(targNo)
+
+      // 存入 sessionStorage
+      sessionStorage.setItem('asset_id', targNo);
+      // console.log(sessionStorage.getItem("asset_id"))
     }
   },
   computed: {
@@ -200,4 +216,5 @@ export default {
   .condition .el-radio :first-child {
     display: none;
   }
+
 </style>

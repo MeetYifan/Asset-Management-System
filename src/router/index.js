@@ -19,6 +19,7 @@ const depreciation = () => import('@/components/depreciation')
 const personal = () => import('@/components/personal')
 const staff = () => import('@/components/staff')
 const addstaff = () => import('@/components/addstaff')
+const operate = () => import('@/components/operate')
 
 // const passwordedit = () => import('@/components/passwordedit')
 
@@ -44,7 +45,14 @@ const routes = [
       {
         path: '/assetslist',
         name: 'assetslist',
-        component: assetslist
+        component: assetslist,
+        children:[
+          {
+            path:'operate',
+            name: 'operate',
+            component: operate,
+          },
+        ]
       },
       {
         path: '/addasset',

@@ -140,14 +140,14 @@ const actions = {
 }
 
 // 定义全局共享属性 getter
-const getters = {
-  vipUsers: state => state.userList.filter(v => v.age > 20),
-}
+// const getters = {
+//   vipUsers: state => state.userList.filter(v => v.age > 20),
+// }
 
 // 创建 store 仓库暴露出去
 export default new Vuex.Store({
   state,
   mutations,
   actions,
-  getters
+  // getters
 })
